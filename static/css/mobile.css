@@ -1,0 +1,444 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    background-color:#0e0e0e;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* COLORES */
+:root{
+    --black-mt:#0e0e0e;
+    --orange-mt: #FEC104;
+    --red-mt: #D7130D;
+
+    --orange-deg-mt: linear-gradient(180deg, rgba(254,193,4,1) 7%, rgba(255,193,0,0.7511379551820728) 97%);
+    --red-deg-mt: linear-gradient(180deg, rgba(215,19,13,1) 7%, rgba(172,5,0,1) 97%);
+
+}
+body{
+    color: #fff;
+
+}
+
+/* HEADER */
+.body__header{
+    color: #fff;
+    z-index: 2;
+    background-color: var(--red-mt);
+
+    position: sticky;
+    top:0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(215,19,13);
+    /* background: linear-gradient(180deg, rgba(215,19,13,1) 3%, rgba(111,2,0,1) 97%, rgba(51,0,0,1) 100%); */
+    
+    height: 5rem;
+}
+.header__title{
+    /* background-color: rgb(0, 0, 0); */
+    text-shadow:  0.1rem  0.1rem  rgb(0, 0, 0);
+    justify-content: center;
+    align-items: center;
+
+    
+}
+/* SOCIAL MEDIA */
+.social-media{
+    color: #fff;
+    z-index: 2;
+    position: fixed;
+    /* position: sticky; */
+    /* position: absolute; */
+    /* top: 37rem; */
+    bottom: 0rem;
+    background-color: rgba(255, 0, 255, 0);
+    width: 7rem;
+    height: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.icon-social-media{
+    margin-top: .1rem;
+    background-color: darkgreen;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    border: var(--orange-mt) solid .5rem;
+    box-shadow: var(--black-mt) .1rem .1rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .83rem;
+}
+.icon-social-media:active{
+    /* background-color: rgba(255, 255, 255, 0.377); */
+    position: relative;
+    right: -.5rem;
+
+    box-shadow: var(--black-mt) 0rem 0rem 1rem;
+}
+.social-media__facebook{
+    background-color: #3b5998;
+}
+.social-media__instagram{
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.social-media__whatsapp{
+    background-color: #128c7e;
+}
+/* CONTENT */
+.content{
+    color: #fff;
+    background-color: rgba(147, 212, 255, 0.055);
+    
+}
+.seccion-page{
+    height: 100rem;
+}
+
+/* SECTIONS */
+.home{
+    background-color: var(--black-mt);
+    
+}
+.quienes-somos{
+    background-color: var(--red-mt);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.contacto{
+    background-color: var(--orange-mt);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/* HOME */
+.home__presentation{
+    /* background-color: #FEC104; */
+    background-image: url("./../img/bg-michelada-s.jpg");
+    
+    display: flex;
+    
+}
+.home__presentation__marco-michelada{
+    /* background-color: aqua; */
+    width: 50%;
+    height: 20rem;
+    
+}
+.home__presentation__img-michelada{
+    /* width: 100%; */
+    max-width: 20rem;
+    
+}
+.home__presentation__description-michelada{
+    
+}
+
+.home__presentation__marco-logo{
+    /* background-color: blueviolet; */
+    width: 50%;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.home__presentation__img-logo{
+    width: 70%;
+}
+.home__presentation__description-michelada{
+    
+}
+
+.home__carusel{
+    background-color: rgba(255, 0, 179, 0);
+    /* background-image: url("./../../el-ame.png"); */
+    
+    height: 15rem;
+    width: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+
+.carousel-marco{
+    background-color: rgba(0, 255, 255, 0);
+    padding-left: 10%;
+    padding-right: 10%;
+    width: 100vw;
+
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.carousel-figure{
+    background-color: var(--orange-mt);
+    padding: .4rem;
+    border-radius: 50%;
+    /* width: 10rem;
+    height: 50%; */
+}
+.carousel-img{
+    
+    background-color: blue;
+
+    border-radius: 50%;
+    width: 6.4rem;
+    height: 6.4rem;
+}
+.home__info{
+    
+}
+/* MAPA */
+.info__mapa{
+    width:100%; 
+    height:100%; 
+    box-shadow: var(--red-mt) 1rem 1rem;
+}
+/* CARTEL */
+.cartel{
+    
+}
+.cartel__fornt{
+    
+}
+.cartel__title-one{    
+    position: relative;
+    background-color: var(--red-mt) ;
+
+    font-size: 3rem;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-shadow:  0.2rem  0.2rem  rgb(0, 0, 0);
+
+    padding: 1rem 10% 1rem 1%;
+
+    height: 8rem;
+    width: 65%;
+
+    box-shadow: var(--orange-mt) 1rem 1rem;
+    top: -4rem;
+    right: -35%;
+}
+
+.cartel__title-two{    
+    padding-left: 6rem;
+    padding-right: .5rem;
+    position: relative;
+    background-color: var(--red-mt) ;
+
+    font-size: 2.5rem;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 8rem;
+    width: 90%;
+
+
+    z-index: 1;
+
+    /* box-shadow: var(--orange-mt) 2rem 1.5rem; */
+    top: 0rem;
+    right: 0%;
+}
+
+.cartel__title-tree{    
+    padding-left: 6rem;
+    position: relative;
+    background-color: var(--orange-mt) ;
+    color: var(--red-mt);
+
+    font-size: 1.6rem;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 5rem;
+    width: 85%;
+
+    top: -1rem;
+    right: 0%;
+}
+
+.marco-cartel{
+    background-color: rgba(139, 0, 139, 0);
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cartel-back{
+    font-size: 3rem;
+    height: 5rem;
+    width: 80%;
+    background-color: var(--black-mt);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--orange-mt) 1rem 1rem;
+
+
+}
+.shadow-red{
+
+    box-shadow: var(--red-mt) 1rem 1rem;
+}
+/* QUIENES SOMOS */
+.info-resume{
+    background-color: rgba(182, 0, 182, 0);
+    padding: 1.4rem;
+    
+    font-size: 1.6rem;
+
+    width: 80%;
+    height: 30rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.info-img{
+    background-color: rgb(0, 0, 0);
+    width: 80%;
+    height: 20rem;
+    background-image: url("./../img/real/micheladas/mchld-01.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+
+}
+.shadow-pic-l{
+
+    box-shadow: var(--orange-mt) 1rem 1rem;
+}
+.shadow-pic-r{
+
+    box-shadow: var(--red-mt) 1rem 1rem;
+}
+.info-more-info{
+    margin-left: 7.5rem;
+    background-color: rgba(0, 0, 0, 0.274);
+    width: 72%;
+    height: 30rem;
+
+}
+.info-remume__text{
+    text-align: justify;
+    font-size: 1.9rem;
+    /* padding: 0rem 2rem 0rem 1rem; */
+}
+.list-menu{
+    list-style:none;
+    padding: 1rem 1rem 0rem;
+    font-size: 1.6rem;
+}
+.list-menu__icon{
+    margin: .5rem;
+    background-color: rgba(0, 0, 0, 0);
+    width: 14rem;
+    height: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+
+}
+.menu-text{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.info-more-info__parrafo{
+   
+    font-size: 1.7rem;
+    text-align: justify;
+    padding: 1rem;
+}
+/* CONTACTO */
+.contacto-info{
+    font-size: 2rem;  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.boton{
+    /* margin-left: 1rem; */
+    margin: .5rem;
+    padding: .5rem;
+    border-radius: 10rem;
+    width: 100%;
+    background-color: rgba(211, 0, 0, 0.548);
+    text-align: center;
+}
+.boton-item{
+    width: 100%;
+}
+/* FOOTER */
+.body__footer{
+    color: #fff;
+    background-color: var(--black-mt);
+    height: 30rem;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+}
+.footer-box{
+    margin-left: 7.2rem;
+    padding: 1rem;
+    border-left: var(--orange-mt) solid .5rem;
+    background-color: #d6249e00;
+    width: 78%;
+    height: 90%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.footer-box__marco{
+    margin-bottom: 1rem;
+    background-color: #00000083;
+    border-bottom: var(--orange-mt) solid .1rem;
+    width: 90%;
+    height: 12rem;
+
+    display: flex;
+    justify-content: center;
+
+}
+.footer-box__img{
+    width: 10rem;
+    height: 10rem;
+}
+.footer-box__credits{
+    padding-bottom: 1rem;
+    background-color: #d6249e00;
+    font-size: 1.6rem;
+    width: 90%;
+}
+a{
+    /* text-decoration: none; */
+    color:#fff;
+}

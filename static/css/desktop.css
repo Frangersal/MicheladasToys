@@ -1,0 +1,478 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+html{
+    background-color: black;
+    font-size: 62.5%;
+    font-family: 'Roboto Slab', serif;
+}
+body{
+    background-color: black;
+    font-family: 'Roboto Slab', serif;
+
+}
+/* NUESTROS COLORES */
+:root{
+    --black-mt:#0a0602;
+    --orange-mt:#FEC104;
+    --red-mt:#D7130D;
+    --orange-deg-mt: linear-gradient(180deg, rgba(254,193,4,1) 7%, rgba(255,193,0,0.7511379551820728) 97%);
+    --red-deg-mt: linear-gradient(180deg, rgba(215,19,13,1) 7%, rgba(172,5,0,1) 97%);
+}
+
+/* HEADER */
+.body__header{
+    color: #fff;
+    z-index: 2;
+    background-color: var(--red-mt);
+
+    position: sticky;
+    top:0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(215,19,13);
+    /* background: linear-gradient(180deg, rgba(215,19,13,1) 3%, rgba(111,2,0,1) 97%, rgba(51,0,0,1) 100%); */
+    
+    height: 5rem;
+}
+.header__title{
+
+    text-shadow:  0.1rem  0.1rem  rgb(0, 0, 0);
+    justify-content: center;
+    align-items: center;
+}
+/* SOCIAL MEDIA */
+.social-media{
+    background-color: rgba(219, 180, 255, 0);
+    width: 11rem;
+    height: 30rem;
+    
+    position:fixed;
+    top: 50%;
+    left: 0%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+.icon-social-media{
+    color: #fff;
+    
+    margin-top: .1rem;
+    margin:auto;
+    background-color: darkgreen;
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 50%;
+    border: var(--orange-mt) solid .5rem;
+    box-shadow: var(--black-mt) .1rem .1rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .83rem;
+}
+.icon-social-media:active{
+    /* background-color: rgba(255, 255, 255, 0.377); */
+    position: relative;
+    right: -.5rem;
+
+    box-shadow: var(--black-mt) 0rem 0rem 1rem;
+}
+.social-media__facebook{
+    background-color: #3b5998;
+}
+.social-media__instagram{
+    background: #d6249f;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+.social-media__whatsapp{
+    background-color: #128c7e;
+}
+/* CONTENT */
+.magin{
+
+}
+.content{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;    
+}
+.seccion-page{
+    padding: 2rem;
+    height: 120rem;
+    width: 80vw;
+}
+.home{
+    background-color: var(--black-mt);
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    
+}
+.quienes-somos{
+    background-color: var(--red-mt);
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    
+}
+.contacto{
+    background-color: var(--orange-mt);
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+/* FOOTER */
+.body__footer{
+    background-color: var(--black-mt);
+    height: 25rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.footer-box{
+    background-color: #d6249e00;
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.footer-box__marco{
+    background-color: #ffd1f000;
+    width: 100%;
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-bottom: var(--orange-mt) solid 1px;
+    
+}
+.footer-box__img{
+    height: 10rem;
+    
+}
+.footer-box__credits{
+    font-size: 1.6rem;
+    color: #fff;
+    padding: .5rem;
+
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    text-align: center;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+/* HOME */
+.home__presentation{
+    background-color: rgba(165, 42, 42, 0);
+    width: 100%;
+    height: 50rem;
+    display: flex;
+
+    /* padding-bottom: 1.5rem; */
+    padding-top: 1rem;
+
+    /* border-bottom: var(--orange-mt) 1px solid; */
+
+    background-image: url("./../img/bg-michelada.jpg");
+    background-size: 50%;
+    background-attachment: fixed;
+    
+}
+.home__presentation__marco-michelada{
+    background-color: rgba(137, 43, 226, 0);
+    width: 50%;
+    overflow: hidden;
+    
+}
+.home__presentation__img-michelada{
+    width: 90% ;
+}
+.home__presentation__description-michelada{
+    
+}
+.home__presentation__marco-logo{
+    background-color: rgba(219, 181, 255, 0);
+    width: 50%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.home__presentation__img-logo{
+    height: 20rem;
+    
+}
+.home__presentation__description-michelada{
+    background-color: cadetblue;
+}
+.cartel__title-one{
+    background-color: var(--red-mt);
+    background: var(--red-deg-mt);
+    padding: 1rem 25% 1rem 10rem;
+    height: 15rem;
+    width: 65%;
+
+    color: #fff;
+    font-size: 5rem;
+    text-align: center;
+
+
+    text-shadow:  0.2rem  0.2rem  rgb(0, 0, 0);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    box-shadow: var(--orange-mt) 1rem 1rem;
+
+    position: relative;
+    top: -20rem;
+    left: 30%;
+    
+}
+.home__debajo{
+    height: 40%;
+    position:relative;
+    top: -10rem;
+
+}
+.home__carusel{
+    margin-bottom: 5rem;
+    background-color: rgba(0, 252, 42, 0);
+    height: 18rem;
+    width: 100%;
+
+    /* display: flex; */
+    
+}
+.carousel-marco{
+    background-color: rgba(0, 255, 255, 0);
+    padding-left: 15%;
+    padding-right: 15%;
+    width: 100%;
+    height: 18rem;
+
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.carousel-figure{
+    background-color: var(--orange-mt);
+    padding: .7rem;
+    border-radius: 50%;
+    width: 15rem;
+    height: 15rem;
+}
+.carousel-img{
+    background-color: blue;
+
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.home__info{
+    background-color: rgba(191, 252, 173, 0);
+    height: 25rem;
+    width: 80vw;
+
+    /* position: absolute;
+    top: 10%; */
+
+    position: relative;
+    right: 15rem;
+
+    
+}
+.cartel__title-two{
+    background-color: var(--red-mt);
+    background: var(--red-deg-mt);
+    height: 15rem;
+    width: 100%;
+
+    color: #fff;
+    font-size: 4rem;
+    text-align: center;
+
+    text-shadow:  0.2rem  0.2rem  rgb(0, 0, 0);
+
+    padding: 1rem 20% 1rem 30%;
+
+    position: relative;
+    right: 0rem;
+    top: 1rem;
+
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: var(--red-deg-mt) -60rem -0rem;
+    
+}
+.cartel__title-tree{
+    background-color: var(--orange-mt);
+    background: var(--orange-deg-mt);
+    width: 82%;
+    height: 10rem;
+    
+    color: var(--red-mt);
+    font-size: 2.5rem;
+    text-align: center;
+
+    /* text-shadow:  0.2rem  0.2rem  rgb(255, 255, 255); */
+
+    padding: 1rem 8% 1rem 36%;
+
+    position: relative;
+    right: 0rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: var(--orange-deg-mt) -60rem -0rem;
+}
+/* SIGUIENTES SECCIONES */
+.marco-cartel{
+    background-color: rgba(137, 43, 226, 0);
+    height: 10rem;
+    width: 100%;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.cartel-back{
+    background-color: var(--black-mt);
+    width: 60%;
+    height: 6rem;
+
+    color: #fff;
+    font-size: 3rem;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: var(--orange-mt) 1rem 1rem;
+    
+}
+
+.shadow-red{
+    
+    box-shadow: var(--red-mt) 1rem 1rem;
+    
+}
+
+.info-resume{
+    background-color: rgba(196, 134, 255, 0);
+    color: #fff;
+    padding: 2rem;
+    width: 50%;
+    height: 30rem;
+    
+}
+.info-img{
+    background-color: rgb(30, 0, 58);
+    width: 50%;
+    height: 30rem;
+
+    background-image: url("./../img/real/micheladas/mchld-01.jpg");
+    background-size: 50%;
+    background-attachment: fixed;
+
+    box-shadow: var(--orange-mt) 1rem 1rem;
+    
+}
+.shadow-pic-l{
+    
+}
+.shadow-pic-r{
+    box-shadow: var(--red-mt) 1rem 1rem;
+    
+}
+/* QUIENES SOMOS */
+.info-remume__text{
+    
+}
+.list-menu{
+    
+}
+.list-menu__icon{
+    
+}
+.menu-text{
+    
+}
+.info-more-info{
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    width: 97%;
+    height: 50rem;
+
+    box-shadow: var(--orange-mt) 1rem 1rem;
+}
+.info-more-info__parrafo{
+    background-color: blueviolet;
+    margin: 1rem;
+    padding: 1rem;
+    
+}
+/* CONTACTO */
+.contacto-info{
+    
+}
+.boton{
+    
+}
+.boton-item{
+    
+}
+.telefono{
+    
+}
+.email{
+    
+}
+.direccion{
+    
+}
+.info-more-info{
+    
+}
+.info__mapa{
+    width: 100%;
+
+    box-shadow: var(--red-mt) 1rem 1rem;
+    
+}
