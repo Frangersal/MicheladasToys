@@ -5,18 +5,18 @@
 }
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
 html{
-    background-color: black;
+    background-color: #111111;
     font-size: 62.5%;
     font-family: 'Roboto Slab', serif;
 }
 body{
-    background-color: black;
+    background-color: #111111;
     font-family: 'Roboto Slab', serif;
 
 }
 /* NUESTROS COLORES */
 :root{
-    --black-mt:#0a0602;
+    --black-mt:#111111;
     --orange-mt:#FEC104;
     --red-mt:#D7130D;
     --orange-deg-mt: linear-gradient(180deg, rgba(254,193,4,1) 7%, rgba(255,193,0,0.7511379551820728) 97%);
@@ -394,10 +394,17 @@ a{
 .info-resume{
     background-color: rgba(196, 134, 255, 0);
     color: #fff;
-    padding: 2rem;
+    padding: 4rem;
     width: 50%;
     height: 30rem;
     
+    
+}
+.info-more-info__parrafo{
+   
+    font-size: 1.7rem;
+    text-align: justify;
+    padding: 1rem;
 }
 .info-img{
     background-color: rgb(30, 0, 58);
@@ -423,13 +430,35 @@ a{
     
 }
 .list-menu{
+    list-style:none;
+    font-size: 1.6rem;
+    width: 100%;
     
+}
+.list-menu__item{
+    background-color: var(--black-mt);
+    /* width: 80%; */
+    border-radius: 3rem;
+    margin: 1rem;
+    padding: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .list-menu__icon{
-    
+    font-size: 3rem;
+    width: 100%;
+    padding: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .menu-text{
-    
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .info-more-info{
     background-color: rgba(0, 0, 0, 0.5);
@@ -438,25 +467,41 @@ a{
     justify-content: center;
     
     width: 97%;
-    height: 50rem;
+    height: 40rem;
 
     box-shadow: var(--orange-mt) 1rem 1rem;
 }
 .info-more-info__parrafo{
-    background-color: blueviolet;
-    margin: 1rem;
-    padding: 1rem;
-    
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    font-size: 1.7rem;
+    text-align: justify;
+    padding: 3rem;
 }
 /* CONTACTO */
 .contacto-info{
     
 }
+
 .boton{
-    
+    /* margin-left: 1rem; */
+    margin: 1rem;
+    padding: .5rem;
+    border-radius: 3rem;
+    width: 100%;
+    background-color: var(--red-mt);
+    text-align: center;
 }
 .boton-item{
-    
+    font-size: 2rem;
+    background-color: #fd584900;
+    width: 100%;
+    text-shadow:  0.1rem  0.1rem  var(--black-mt);
+}
+.boton-icono{
+    font-size: 4rem;
+    background-color: #d6249e00;
+
 }
 .telefono{
     

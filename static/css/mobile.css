@@ -12,7 +12,7 @@ html{
 }
 /* COLORES */
 :root{
-    --black-mt:#0e0e0e;
+    --black-mt:#111111;
     --orange-mt: #FEC104;
     --red-mt: #D7130D;
 
@@ -320,6 +320,9 @@ body{
     justify-content: center;
     align-items: center;
 
+    position: relative;
+    right:-4rem;
+
 }
 .info-img{
     background-color: rgb(0, 0, 0);
@@ -349,25 +352,38 @@ body{
     text-align: justify;
     font-size: 1.9rem;
     /* padding: 0rem 2rem 0rem 1rem; */
+    padding: 2rem;
 }
 .list-menu{
     list-style:none;
-    padding: 1rem 1rem 0rem;
     font-size: 1.6rem;
+    width: 100%;
+    
 }
-.list-menu__icon{
-    margin: .5rem;
-    background-color: rgba(0, 0, 0, 0);
-    width: 14rem;
-    height: 2rem;
+.list-menu__item{
+    background-color: black;
+    /* width: 80%; */
+    border-radius: 3rem;
+    margin: 1rem;
+    padding: .5rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
-    align-items: center;
-
+    justify-content: center;
+}
+.list-menu__icon{
+    font-size: 3rem;
+    width: 100%;
+    padding: .5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .menu-text{
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .info-more-info__parrafo{
    
@@ -386,13 +402,20 @@ body{
     /* margin-left: 1rem; */
     margin: .5rem;
     padding: .5rem;
-    border-radius: 10rem;
+    border-radius: 3rem;
     width: 100%;
-    background-color: rgba(211, 0, 0, 0.548);
+    background-color: rgb(211, 0, 0);
     text-align: center;
 }
 .boton-item{
+    background-color: #fd584900;
     width: 100%;
+    text-shadow:  0.1rem  0.1rem  rgb(0, 0, 0);
+}
+.boton-icono{
+    font-size: 4rem;
+    background-color: #d6249e00;
+
 }
 /* FOOTER */
 .body__footer{
@@ -419,7 +442,7 @@ body{
 }
 .footer-box__marco{
     margin-bottom: 1rem;
-    background-color: #00000083;
+    background-color: var(--black-mt);
     border-bottom: var(--orange-mt) solid .1rem;
     width: 90%;
     height: 12rem;
