@@ -63,8 +63,6 @@ body{
 }
 .icon-social-media{
     color: #fff;
-    
-    margin-top: .1rem;
     margin:auto;
     background-color: darkgreen;
     width: 6.5rem;
@@ -76,12 +74,14 @@ body{
     justify-content: center;
     align-items: center;
     font-size: .83rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.icon-social-media:hover {
+    transform: scale(1.1);
+    box-shadow: var(--black-mt) .2rem .2rem 1.5rem;
 }
 .icon-social-media:active{
-    /* background-color: rgba(255, 255, 255, 0.377); */
-    position: relative;
-    right: -.5rem;
-
+    transform: scale(0.95);
     box-shadow: var(--black-mt) 0rem 0rem 1rem;
 }
 .social-media__facebook{
@@ -105,17 +105,21 @@ body{
     justify-content: center;    
 }
 .seccion-page{
-    padding: 2rem;
-    height: 120rem;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    height: auto;
     width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
 }
 .home{
     background-color: var(--black-mt);
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-
-    
+    align-items: center;
 }
 .quienes-somos{
     background-color: var(--red-mt);
@@ -184,89 +188,90 @@ a{
 }
 /* HOME */
 .home__presentation{
-    background-color: rgba(165, 42, 42, 0);
+    position: relative;
+    background-color: var(--black-mt);
     width: 100%;
-    height: 50rem;
+    min-height: 55rem;
     display: flex;
-
-    /* padding-bottom: 1.5rem; */
-    padding-top: 1rem;
-
-    /* border-bottom: var(--orange-mt) 1px solid; */
-
+    justify-content: flex-end;
+    align-items: center;
+    
+    padding-bottom: 5rem;
     background-image: url("./../img/bg-michelada.jpg");
     background-size: 50%;
     background-attachment: fixed;
-    
+    border-bottom: .8rem solid var(--orange-mt);
 }
 .home__presentation__marco-michelada{
-    background-color: rgba(137, 43, 226, 0);
-    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    background-color: transparent;
+    z-index: 0;
     overflow: hidden;
-    
-}
-.home__presentation__img-michelada{
-    width: 90% ;
-}
-.home__presentation__description-michelada{
-    
 }
 .home__presentation__marco-logo{
-    background-color: rgba(219, 181, 255, 0);
-    width: 50%;
-    height: 70%;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    width: 50%;
+    background-color: transparent;
+    z-index: 1;
+}
+.home__presentation__img-michelada{
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    object-position: left bottom;
+    max-width: none;
 }
 .home__presentation__img-logo{
-    height: 20rem;
-    
+    width: 100%;
+    max-width: 350px;
+    height: auto;
 }
 .home__presentation__description-michelada{
     background-color: cadetblue;
 }
 .cartel__title-one{
-    background-color: var(--red-mt);
+    background: var(--red-mt);
     background: var(--red-deg-mt);
-    padding: 1rem 25% 1rem 10rem;
+    padding: 1rem 8rem;
     height: 15rem;
-    width: 65%;
+    width: 70%;
+    margin: -8rem auto 4rem;
 
+    font-family: 'Rockwell', serif;
     color: #fff;
-    font-size: 5rem;
+    font-size: 5.5rem;
     text-align: center;
+    border: 4px solid var(--black-mt);
 
-
-    text-shadow:  0.2rem  0.2rem  rgb(0, 0, 0);
+    text-shadow: 0.3rem 0.3rem 0px rgb(0, 0, 0);
 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     
-    box-shadow: var(--orange-mt) 1rem 1rem;
-
-    position: relative;
-    top: -20rem;
-    left: 30%;
-    
+    box-shadow: 1.5rem 1.5rem 0px var(--orange-mt);
+    z-index: 10;
+    transform: rotate(-2deg);
 }
 .home__debajo{
-    height: 40%;
-    position:relative;
-    top: -10rem;
-
+    width: 100%;
+    margin-top: 2rem;
+    padding-bottom: 5rem;
 }
 .home__carusel{
     margin-bottom: 5rem;
-    background-color: rgba(0, 252, 42, 0);
-    height: 18rem;
     width: 100%;
-
-    /* display: flex; */
-    
 }
 .carousel-marco{
     background-color: rgba(0, 255, 255, 0);
@@ -280,87 +285,76 @@ a{
     align-items: center;
 }
 .carousel-figure{
-    background-color: var(--orange-mt);
-    padding: .7rem;
+    background-color: var(--black-mt);
+    padding: .5rem;
     border-radius: 50%;
-    width: 15rem;
-    height: 15rem;
+    width: 16rem;
+    height: 16rem;
+    border: .4rem solid var(--orange-mt);
+    box-shadow: .8rem .8rem 0px var(--red-mt);
+    transition: transform 0.3s ease;
+}
+.carousel-figure:hover{
+    transform: scale(1.1) rotate(5deg);
 }
 .carousel-img{
-    background-color: blue;
-
+    background-color: transparent;
+    object-fit: cover;
     border-radius: 50%;
     width: 100%;
     height: 100%;
 }
 .home__info{
-    background-color: rgba(191, 252, 173, 0);
-    height: 25rem;
-    width: 80vw;
-
-    /* position: absolute;
-    top: 10%; */
-
-    position: relative;
-    right: 15rem;
-
-    
+    background-color: transparent;
+    width: 100%;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
 }
 .cartel__title-two{
-    background-color: var(--red-mt);
-    background: var(--red-deg-mt);
-    height: 15rem;
+    background: var(--red-mt);
     width: 100%;
-
+    padding: 2rem 5%;
+    font-family: 'Rockwell', serif;
     color: #fff;
     font-size: 4rem;
     text-align: center;
-
-    text-shadow:  0.2rem  0.2rem  rgb(0, 0, 0);
-
-    padding: 1rem 20% 1rem 30%;
-
-    position: relative;
-    right: 0rem;
-    top: 1rem;
-
+    text-shadow: 0.3rem 0.3rem 0px var(--black-mt);
+    border-top: .5rem solid var(--orange-mt);
+    border-bottom: .5rem solid var(--orange-mt);
     z-index: 1;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    box-shadow: var(--red-deg-mt) -60rem -0rem;
-    
+    transform: skewY(-1deg);
 }
 .cartel__title-tree{
-    background-color: var(--orange-mt);
-    background: var(--orange-deg-mt);
-    width: 82%;
-    height: 10rem;
-    
-    color: var(--red-mt);
-    font-size: 2.5rem;
+    background: var(--orange-mt);
+    width: 80%;
+    font-family: 'Rockwell', serif;
+    color: var(--black-mt);
+    font-size: 2.8rem;
+    font-weight: bold;
     text-align: center;
-
-    /* text-shadow:  0.2rem  0.2rem  rgb(255, 255, 255); */
-
-    padding: 1rem 8% 1rem 36%;
-
-    position: relative;
-    right: 0rem;
-
+    padding: 2rem 5%;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    box-shadow: var(--orange-deg-mt) -60rem -0rem;
+    border: .4rem solid var(--black-mt);
+    box-shadow: 1.5rem 1.5rem 0px var(--red-mt);
+    margin-top: -2rem;
+    z-index: 2;
+    transform: rotate(1deg);
 }
 /* SIGUIENTES SECCIONES */
 .marco-cartel{
     background-color: rgba(137, 43, 226, 0);
     height: 10rem;
     width: 100%;
+    margin-bottom: 6rem;
+    margin-top: 2rem;
 
     display: flex;
     flex-wrap: wrap;
@@ -371,34 +365,37 @@ a{
 .cartel-back{
     background-color: var(--black-mt);
     width: 60%;
-    height: 6rem;
+    height: 8rem;
 
+    font-family: 'Rockwell', serif;
     color: #fff;
-    font-size: 3rem;
+    font-size: 3.5rem;
+    border: .4rem solid var(--orange-mt);
 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
-    box-shadow: var(--orange-mt) 1rem 1rem;
-    
+    box-shadow: 1.2rem 1.2rem 0px var(--orange-mt);
+    transform: rotate(1deg);
 }
 
 .shadow-red{
-    
-    box-shadow: var(--red-mt) 1rem 1rem;
-    
+    box-shadow: 1.2rem 1.2rem 0px var(--red-mt) !important;
+    border-color: var(--red-mt) !important;
+    transform: rotate(-1deg);
 }
 
 .info-resume{
     background-color: rgba(196, 134, 255, 0);
     color: #fff;
-    padding: 4rem;
+    padding: 0rem 4rem;
     width: 50%;
-    height: 30rem;
-    
-    
+    min-height: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .info-more-info__parrafo{
    
@@ -407,23 +404,23 @@ a{
     padding: 1rem;
 }
 .info-img{
-    background-color: rgb(30, 0, 58);
-    width: 50%;
-    height: 30rem;
+    background-color: var(--black-mt);
+    width: 45%;
+    height: 35rem;
 
     background-image: url("./../img/real/micheladas/mchld-01.jpg");
     background-size: 50%;
     background-attachment: fixed;
+    border: .5rem solid var(--orange-mt);
 
-    box-shadow: var(--orange-mt) 1rem 1rem;
-    
+    box-shadow: 1.5rem 1.5rem 0px var(--orange-mt);
 }
 .shadow-pic-l{
-    
+    box-shadow: -1.5rem 1.5rem 0px var(--orange-mt);
 }
 .shadow-pic-r{
-    box-shadow: var(--red-mt) 1rem 1rem;
-    
+    box-shadow: 1.5rem 1.5rem 0px var(--red-mt);
+    border-color: var(--red-mt);
 }
 /* QUIENES SOMOS */
 .info-remume__text{
@@ -437,15 +434,23 @@ a{
 }
 .list-menu__item{
     background-color: var(--black-mt);
-    /* width: 80%; */
-    border-radius: 3rem;
-    margin: 1rem;
+    border: .3rem solid var(--orange-mt);
+    border-radius: 1rem;
+    margin: 1.5rem auto;
+    width: 90%;
     padding: .5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    box-shadow: .8rem .8rem 0px var(--red-mt);
+    transition: transform 0.2s ease;
+}
+.list-menu__item:hover{
+    transform: translate(-.2rem, -.2rem);
+    box-shadow: 1rem 1rem 0px var(--red-mt);
 }
 .list-menu__icon{
+    color: var(--orange-mt);
     font-size: 3rem;
     width: 100%;
     padding: .5rem;
@@ -461,15 +466,17 @@ a{
     justify-content: center;
 }
 .info-more-info{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--black-mt);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    border: .4rem solid var(--orange-mt);
     
-    width: 97%;
-    height: 40rem;
+    width: 90%;
+    margin-top: 4rem;
+    min-height: 20rem;
 
-    box-shadow: var(--orange-mt) 1rem 1rem;
+    box-shadow: 1.5rem 1.5rem 0px var(--red-mt);
 }
 .info-more-info__parrafo{
     font-family: Arial, Helvetica, sans-serif;
@@ -484,13 +491,19 @@ a{
 }
 
 .boton{
-    /* margin-left: 1rem; */
-    margin: 1rem;
-    padding: .5rem;
-    border-radius: 3rem;
-    width: 100%;
+    margin: 1.5rem auto;
+    padding: 1rem .5rem;
+    border-radius: 1rem;
+    border: .3rem solid var(--black-mt);
+    width: 90%;
     background-color: var(--red-mt);
     text-align: center;
+    box-shadow: .8rem .8rem 0px var(--orange-mt);
+    transition: transform 0.2s ease;
+}
+.boton:hover{
+    transform: translate(-.2rem, -.2rem);
+    box-shadow: 1rem 1rem 0px var(--orange-mt);
 }
 .boton-item{
     font-size: 2rem;

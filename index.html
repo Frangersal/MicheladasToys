@@ -45,8 +45,11 @@
         <section class="seccion-page home">
             <div class="home__presentation">
                 <figure class="home__presentation__marco-michelada">
-                    <img class="home__presentation__img-michelada" src="./static/img/michelada-home-real.png"
-                        alt="foto de michelada con hamburguesa">
+                    <picture style="display: contents;">
+                        <source media="(max-width: 599px)" srcset="./static/img/micheladasfrank-small.png">
+                        <img class="home__presentation__img-michelada" src="./static/img/micheladafrank-home.png"
+                            alt="foto de michelada con hamburguesa">
+                    </picture>
                     <figcaption class="home__presentation__description-michelada"></figcaption>
                 </figure>
 
@@ -59,7 +62,6 @@
             <h2 class="cartel__title-one">
                 Micheladas Frank's
             </h2>
-            </div>
             <div class="home__debajo">
 
                 <div class="home__carusel">
@@ -217,8 +219,8 @@
                     <div class="boton email">
                         <i class="boton-item boton-icono  fas fa-envelope"></i>
                         <span class="boton-item">
-                            contacto@MFrank's.com
-                            </span">
+                            contacto@mfranks.com
+                        </span>
                     </div>
                     <div class="boton direccion">
                         <i class="boton-item boton-icono fas fa-map-marker-alt"></i>

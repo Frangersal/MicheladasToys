@@ -175,33 +175,52 @@ a{
 }
 /* HOME */
 .home__presentation{
-    background-color: rgba(165, 42, 42, 0);
+    position: relative;
+    background-color: var(--black-mt);
     width: 100%;
-    height: 40rem;
+    min-height: 45rem;
     display: flex;
-
+    justify-content: flex-end;
+    align-items: center;
     
+    padding-bottom: 3rem;
+    background-image: url("./../img/bg-michelada.jpg");
+    background-size: 50vw auto;
+    background-attachment: fixed;
+    border-bottom: .8rem solid var(--orange-mt);
 }
 .home__presentation__marco-michelada{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
     background-color: rgba(137, 43, 226, 0);
-    width: 50%;
+    z-index: 0;
     overflow: hidden;
 }
 .home__presentation__img-michelada{
-    width: 100% ;
-    
+    height: 100%;
+    width: auto;
+    max-width: none;
+    object-fit: cover;
+    object-position: left bottom;
 }
 .home__presentation__description-michelada{
     
 }
 .home__presentation__marco-logo{
+    position: relative;
     background-color: rgba(219, 181, 255, 0);
     width: 50%;
     height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    z-index: 1;
 }
 .home__presentation__img-logo{
     height: 20rem;
@@ -212,25 +231,26 @@ a{
 }
 .cartel__title-one{
     background-color: var(--red-mt);
-    padding: 1rem 15% 1rem 10rem;
+    padding: 2rem 5%;
     height: 15rem;
-    width: 65%;
+    width: 70%;
+    margin: -6rem auto 4rem;
 
+    font-family: 'Rockwell', serif;
     color: #fff;
     font-size: 5rem;
     text-align: center;
+    border: .4rem solid var(--black-mt);
 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     
-    box-shadow: var(--orange-mt) 1rem 1rem;
-
-    position: relative;
-    top: -10rem;
-    left: 40%;
-    
+    box-shadow: 1.2rem 1.2rem 0px var(--orange-mt);
+    text-shadow: 0.3rem 0.3rem 0px rgb(0, 0, 0);
+    z-index: 10;
+    transform: rotate(-2deg);
 }
 .home__debajo{
     height: 70%;
@@ -256,19 +276,24 @@ a{
     align-items: center;
 }
 .carousel-figure{
-    background-color: var(--orange-mt);
-    padding: .5rem;
+    background-color: var(--black-mt);
+    padding: .3rem;
     border-radius: 50%;
-    /* width: 10rem;
-    height: 50%; */
+    width: 12rem;
+    height: 12rem;
+    border: .3rem solid var(--orange-mt);
+    box-shadow: .8rem .8rem 0px var(--red-mt);
+    transition: transform 0.3s ease;
+}
+.carousel-figure:hover{
+    transform: scale(1.1) rotate(5deg);
 }
 .carousel-img{
-    
-    background-color: blue;
-
+    background-color: transparent;
+    object-fit: cover;
     border-radius: 50%;
-    width: 11rem;
-    height: 11rem;
+    width: 100%;
+    height: 100%;
 }
 .home__info{
     background-color: rgba(191, 252, 173, 0);
@@ -281,103 +306,109 @@ a{
 }
 .cartel__title-two{
     background-color: var(--red-mt);
-    height: 15rem;
-    width: 120%;
-
+    width: 100%;
+    font-family: 'Rockwell', serif;
     color: #fff;
     font-size: 4rem;
     text-align: center;
-
-    padding: 1rem 20% 1rem 30%;
-
-    position: relative;
-    right: 10rem;
+    padding: 2rem 5%;
+    border-top: .4rem solid var(--orange-mt);
+    border-bottom: .4rem solid var(--orange-mt);
 
     display: flex;
     justify-content: center;
     align-items: center;
-
-    
+    text-shadow: 0.3rem 0.3rem 0px var(--black-mt);
+    transform: skewY(-1deg);
+    z-index: 1;
 }
 .cartel__title-tree{
     background-color: var(--orange-mt);
-    width: 100%;
-    height: 10rem;
-    
-    color: var(--red-mt);
-    font-size: 2.5rem;
+    width: 80%;
+    font-family: 'Rockwell', serif;
+    color: var(--black-mt);
+    font-weight: bold;
+    font-size: 2.8rem;
     text-align: center;
 
-    padding: 1rem 8% 1rem 35%;
-
-    position: relative;
-    right: 10rem;
-
+    padding: 2rem 5%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: .4rem solid var(--black-mt);
+    box-shadow: 1.2rem 1.2rem 0px var(--red-mt);
+    margin-top: -2rem;
+    z-index: 2;
+    transform: rotate(1deg);
 }
 /* SIGUIENTES SECCIONES */
 .marco-cartel{
-    background-color: rgba(137, 43, 226, 0);
-    height: 10rem;
+    background-color: transparent;
     width: 100%;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    
 }
 .cartel-back{
     background-color: var(--black-mt);
     width: 60%;
-    height: 6rem;
+    height: 8rem;
 
+    font-family: 'Rockwell', serif;
     color: #fff;
-    font-size: 3rem;
+    font-size: 3.5rem;
+    border: .4rem solid var(--orange-mt);
 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 
-    box-shadow: var(--orange-mt) 1rem 1rem;
-    
+    box-shadow: 1.2rem 1.2rem 0px var(--orange-mt);
+    transform: rotate(1deg);
 }
 
 .shadow-red{
-    
-    box-shadow: var(--red-mt) 1rem 1rem;
-    
+    box-shadow: 1.2rem 1.2rem 0px var(--red-mt) !important;
+    border-color: var(--red-mt) !important;
+    transform: rotate(-1deg);
 }
 
 .info-resume{
-    background-color: rgba(196, 134, 255, 0);
+    background-color: transparent;
     color: #fff;
-    padding: 2rem;
+    padding: 0 2rem;
     width: 50%;
-    height: 30rem;
-    
+    min-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .info-img{
-    background-color: rgb(30, 0, 58);
-    width: 50%;
+    background-color: var(--black-mt);
+    width: 45%;
     height: 30rem;
 
     background-image: url("./../img/real/micheladas/mchld-01.jpg");
-    background-size:cover;
+    background-size: 50vw auto; /* parallax support for tablet size elements */
+    background-position: center center;
     background-attachment: fixed;
+    border: .4rem solid var(--orange-mt);
 
-    box-shadow: var(--orange-mt) 1rem 1rem;
-    
+    box-shadow: 1.2rem 1.2rem 0px var(--orange-mt);
+    transform: rotate(-2deg);
 }
 .shadow-pic-l{
-    
+    box-shadow: -1.2rem 1.2rem 0px var(--orange-mt);
+    transform: rotate(2deg);
 }
 .shadow-pic-r{
-    box-shadow: var(--red-mt) 1rem 1rem;
-    
+    box-shadow: 1.2rem 1.2rem 0px var(--red-mt);
+    border-color: var(--red-mt);
 }
 /* QUIENES SOMOS */
 .info-remume__text{
@@ -390,16 +421,24 @@ a{
     
 }
 .list-menu__item{
-    background-color: black;
-    /* width: 80%; */
-    border-radius: 3rem;
-    margin: 1rem;
+    background-color: var(--black-mt);
+    border: .3rem solid var(--orange-mt);
+    border-radius: 1rem;
+    margin: 1.5rem auto;
+    width: 90%;
     padding: .5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    box-shadow: .8rem .8rem 0px var(--red-mt);
+    transition: transform 0.2s ease;
+}
+.list-menu__item:hover{
+    transform: translate(-.2rem, -.2rem);
+    box-shadow: 1rem 1rem 0px var(--red-mt);
 }
 .list-menu__icon{
+    color: var(--orange-mt);
     font-size: 3rem;
     width: 100%;
     padding: .5rem;
@@ -415,15 +454,17 @@ a{
     justify-content: center;
 }
 .info-more-info{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--black-mt);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    border: .4rem solid var(--orange-mt);
     
     width: 97%;
-    height: 40vh;
+    margin-top: 4rem;
+    min-height: 20rem;
 
-    box-shadow: var(--orange-mt) 1rem 1rem;
+    box-shadow: 1.2rem 1.2rem 0px var(--red-mt);
 }
 .info-more-info__parrafo{
     font-family: Arial, Helvetica, sans-serif;
@@ -437,13 +478,19 @@ a{
     
 }
 .boton{
-    /* margin-left: 1rem; */
-    margin: .5rem;
-    padding: .5rem;
-    border-radius: 3rem;
-    width: 100%;
-    background-color: rgb(211, 0, 0);
+    margin: 1.5rem auto;
+    padding: 1rem .5rem;
+    border-radius: 1rem;
+    border: .3rem solid var(--black-mt);
+    width: 90%;
+    background-color: var(--red-mt);
     text-align: center;
+    box-shadow: .8rem .8rem 0px var(--orange-mt);
+    transition: transform 0.2s ease;
+}
+.boton:hover{
+    transform: translate(-.2rem, -.2rem);
+    box-shadow: 1rem 1rem 0px var(--orange-mt);
 }
 .boton-item{
     font-size: 1.8rem;

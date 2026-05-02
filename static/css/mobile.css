@@ -72,18 +72,16 @@ body{
     height: 6rem;
     border-radius: 50%;
     border: var(--orange-mt) solid .5rem;
-    box-shadow: var(--black-mt) .1rem .1rem 1rem;
+    box-shadow: .2rem .2rem 0px var(--black-mt);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: .83rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .icon-social-media:active{
-    /* background-color: rgba(255, 255, 255, 0.377); */
-    position: relative;
-    right: -.5rem;
-
-    box-shadow: var(--black-mt) 0rem 0rem 1rem;
+    transform: scale(0.95);
+    box-shadow: .1rem .1rem 0px var(--black-mt);
 }
 .social-media__facebook{
     background-color: #3b5998;
@@ -102,7 +100,9 @@ body{
     
 }
 .seccion-page{
-    height: 100rem;
+    height: auto;
+    min-height: 100vh;
+    padding: 2rem 0;
 }
 
 /* SECTIONS */
@@ -125,35 +125,48 @@ body{
 }
 /* HOME */
 .home__presentation{
+    position: relative;
     /* background-color: #FEC104; */
     background-image: url("./../img/bg-michelada-s.jpg");
     
     display: flex;
-    
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 30rem;
 }
 .home__presentation__marco-michelada{
+    position: absolute;
+    top: 0;
+    left: 0;
     /* background-color: aqua; */
-    width: 50%;
-    height: 20rem;
-    
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    z-index: 0;
+    overflow: hidden;
 }
 .home__presentation__img-michelada{
-    /* width: 100%; */
-    max-width: 20rem;
-    
+    height: 100%;
+    width: auto;
+    max-width: none;
+    object-fit: cover;
+    object-position: left bottom;
 }
 .home__presentation__description-michelada{
     
 }
 
 .home__presentation__marco-logo{
+    position: relative;
     /* background-color: blueviolet; */
-    width: 50%;
-    height: 15rem;
+    width: 60%;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    z-index: 1;
 }
 .home__presentation__img-logo{
     width: 70%;
@@ -185,19 +198,20 @@ body{
     align-items: center;
 }
 .carousel-figure{
-    background-color: var(--orange-mt);
-    padding: .4rem;
+    background-color: var(--black-mt);
+    padding: .3rem;
     border-radius: 50%;
-    /* width: 10rem;
-    height: 50%; */
+    width: 7rem;
+    height: 7rem;
+    border: .3rem solid var(--orange-mt);
+    box-shadow: .4rem .4rem 0px var(--red-mt);
 }
 .carousel-img{
-    
-    background-color: blue;
-
+    background-color: transparent;
+    object-fit: cover;
     border-radius: 50%;
-    width: 6.4rem;
-    height: 6.4rem;
+    width: 100%;
+    height: 100%;
 }
 .home__info{
     
@@ -216,137 +230,139 @@ body{
     
 }
 .cartel__title-one{    
-    position: relative;
-    background-color: var(--red-mt) ;
+    background-color: var(--red-mt);
+    padding: 1rem 5%;
+    height: auto;
+    min-height: 8rem;
+    width: 80%;
+    margin: -4rem auto 2rem;
 
+    font-family: 'Rockwell', serif;
+    color: #fff;
     font-size: 3rem;
     text-align: center;
+    border: .4rem solid var(--black-mt);
 
     display: flex;
-    align-items: center;
     justify-content: center;
-
-    text-shadow:  0.2rem  0.2rem  rgb(0, 0, 0);
-
-    padding: 1rem 10% 1rem 1%;
-
-    height: 8rem;
-    width: 65%;
-
-    box-shadow: var(--orange-mt) 1rem 1rem;
-    top: -4rem;
-    right: -35%;
+    align-items: center;
+    
+    box-shadow: .8rem .8rem 0px var(--orange-mt);
+    text-shadow: 0.2rem 0.2rem 0px rgb(0, 0, 0);
+    z-index: 10;
+    transform: rotate(-2deg);
 }
 
 .cartel__title-two{    
-    padding-left: 6rem;
-    padding-right: .5rem;
-    position: relative;
-    background-color: var(--red-mt) ;
-
+    background-color: var(--red-mt);
+    width: 100%;
+    font-family: 'Rockwell', serif;
+    color: #fff;
     font-size: 2.5rem;
     text-align: center;
+    padding: 1.5rem 5%;
+    border-top: .4rem solid var(--orange-mt);
+    border-bottom: .4rem solid var(--orange-mt);
 
     display: flex;
-    align-items: center;
     justify-content: center;
-
-    height: 8rem;
-    width: 90%;
-
-
+    align-items: center;
+    text-shadow: 0.2rem 0.2rem 0px var(--black-mt);
+    transform: skewY(-1deg);
     z-index: 1;
-
-    /* box-shadow: var(--orange-mt) 2rem 1.5rem; */
-    top: 0rem;
-    right: 0%;
 }
 
 .cartel__title-tree{    
-    padding-left: 6rem;
-    position: relative;
-    background-color: var(--orange-mt) ;
-    color: var(--red-mt);
-
-    font-size: 1.6rem;
+    background-color: var(--orange-mt);
+    width: 90%;
+    font-family: 'Rockwell', serif;
+    color: var(--black-mt);
+    font-weight: bold;
+    font-size: 1.8rem;
     text-align: center;
 
+    padding: 1.5rem 5%;
     display: flex;
-    align-items: center;
     justify-content: center;
-
-    height: 5rem;
-    width: 85%;
-
-    top: -1rem;
-    right: 0%;
+    align-items: center;
+    border: .4rem solid var(--black-mt);
+    box-shadow: .8rem .8rem 0px var(--red-mt);
+    margin: -1.5rem auto 0;
+    z-index: 2;
+    transform: rotate(1deg);
 }
 
 .marco-cartel{
-    background-color: rgba(139, 0, 139, 0);
+    background-color: transparent;
     width: 100%;
-    height: 10rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .cartel-back{
-    font-size: 3rem;
-    height: 5rem;
-    width: 80%;
     background-color: var(--black-mt);
+    width: 80%;
+    height: 6rem;
+
+    font-family: 'Rockwell', serif;
+    color: #fff;
+    font-size: 3rem;
+    border: .4rem solid var(--orange-mt);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: var(--orange-mt) 1rem 1rem;
 
-
+    box-shadow: .8rem .8rem 0px var(--orange-mt);
+    transform: rotate(1deg);
 }
 .shadow-red{
-
-    box-shadow: var(--red-mt) 1rem 1rem;
+    box-shadow: .8rem .8rem 0px var(--red-mt) !important;
+    border-color: var(--red-mt) !important;
+    transform: rotate(-1deg);
 }
 /* QUIENES SOMOS */
 .info-resume{
-    background-color: rgba(182, 0, 182, 0);
+    background-color: transparent;
     padding: 1.4rem;
-    
     font-size: 1.6rem;
-
-    width: 80%;
-    height: 30rem;
+    width: 90%;
+    min-height: 25rem;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-
-    position: relative;
-    right:-4rem;
-
+    margin: 0 auto;
 }
 .info-img{
-    background-color: rgb(0, 0, 0);
-    width: 80%;
-    height: 20rem;
+    background-color: var(--black-mt);
+    width: 90%;
+    height: 25rem;
     background-image: url("./../img/real/micheladas/mchld-01.jpg");
-    background-size:cover;
-    background-attachment: fixed;
+    background-size: cover; /* Mobile suele requerir cover por espacio corto */
+    background-position: center;
+    border: .4rem solid var(--orange-mt);
+    margin: 2rem auto;
 
+    box-shadow: .8rem .8rem 0px var(--orange-mt);
 }
 .shadow-pic-l{
-
-    box-shadow: var(--orange-mt) 1rem 1rem;
+    box-shadow: -.8rem .8rem 0px var(--orange-mt);
 }
 .shadow-pic-r{
-
-    box-shadow: var(--red-mt) 1rem 1rem;
+    box-shadow: .8rem .8rem 0px var(--red-mt);
+    border-color: var(--red-mt);
 }
 .info-more-info{
-    margin-left: 7.5rem;
-    background-color: rgba(0, 0, 0, 0.274);
-    width: 72%;
-    height: 30rem;
-
+    background-color: var(--black-mt);
+    width: 90%;
+    margin: 2rem auto;
+    min-height: 20rem;
+    border: .4rem solid var(--orange-mt);
+    box-shadow: .8rem .8rem 0px var(--red-mt);
+    display: flex;
+    justify-content: center;
 }
 .info-remume__text{
     text-align: justify;
@@ -361,16 +377,24 @@ body{
     
 }
 .list-menu__item{
-    background-color: black;
-    /* width: 80%; */
-    border-radius: 3rem;
-    margin: 1rem;
+    background-color: var(--black-mt);
+    border: .3rem solid var(--orange-mt);
+    border-radius: 1rem;
+    margin: 1.5rem auto;
+    width: 100%;
     padding: .5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    box-shadow: .6rem .6rem 0px var(--red-mt);
+    transition: transform 0.2s ease;
+}
+.list-menu__item:active{
+    transform: translate(-.2rem, -.2rem);
+    box-shadow: .8rem .8rem 0px var(--red-mt);
 }
 .list-menu__icon{
+    color: var(--orange-mt);
     font-size: 3rem;
     width: 100%;
     padding: .5rem;
@@ -399,13 +423,19 @@ body{
     justify-content: center;
 }
 .boton{
-    /* margin-left: 1rem; */
-    margin: .5rem;
-    padding: .5rem;
-    border-radius: 3rem;
+    margin: 1.5rem auto;
+    padding: 1rem .5rem;
+    border-radius: 1rem;
+    border: .3rem solid var(--black-mt);
     width: 100%;
-    background-color: rgb(211, 0, 0);
+    background-color: var(--red-mt);
     text-align: center;
+    box-shadow: .6rem .6rem 0px var(--orange-mt);
+    transition: transform 0.2s ease;
+}
+.boton:active{
+    transform: translate(-.2rem, -.2rem);
+    box-shadow: .8rem .8rem 0px var(--orange-mt);
 }
 .boton-item{
     background-color: #fd584900;
