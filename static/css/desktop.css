@@ -3,15 +3,20 @@
     margin: 0;
     box-sizing: border-box;
 }
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+@font-face {
+    font-family: 'Roboto Mono';
+    src: url('../assets/fonts/RobotoMono-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 html{
     background-color: #111111;
     font-size: 62.5%;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Mono', monospace;
 }
 body{
     background-color: #111111;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto Mono', monospace;
 
 }
 /* NUESTROS COLORES */
@@ -26,7 +31,7 @@ body{
 /* HEADER */
 .body__header{
     color: #fff;
-    z-index: 2;
+    z-index: 1000;
     background-color: var(--red-mt);
 
     position: sticky;
