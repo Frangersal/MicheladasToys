@@ -10,6 +10,10 @@
 
     <link rel="preload" href="./static/fontawesome-free-5.15.3-web/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./static/fontawesome-free-5.15.3-web/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    
+    <!-- Precarga de imagen LCP (fondo) para que sea descubrible de inmediato -->
+    <link rel="preload" as="image" href="./static/img/bg-michelada.jpg" fetchpriority="high">
+
     <link href="./static/fontawesome-free-5.15.3-web/css/all.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./static/css/desktop.css" media="screen and (min-width: 1025px)">
@@ -102,14 +106,14 @@
                     <picture style="display: contents;">
                         <source media="(max-width: 599px)" srcset="./static/img/micheladasfrank-small.png">
                         <img class="home__presentation__img-michelada" src="./static/img/micheladafrank-home.png"
-                            alt="foto de michelada con hamburguesa">
+                            alt="foto de michelada con hamburguesa" fetchpriority="high">
                     </picture>
                     <figcaption class="home__presentation__description-michelada"></figcaption>
                 </figure>
 
                 <figure class="home__presentation__marco-logo">
                     <img class="home__presentation__img-logo" src="./static/img/logo-micheladas-franks.webp"
-                        alt="Logotipo de Micheladas Frank's">
+                        alt="Logotipo de Micheladas Frank's" fetchpriority="high">
                     <figcaption class="home__presentation__description-michelada"></figcaption>
                 </figure>
             </div>
